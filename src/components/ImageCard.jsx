@@ -38,8 +38,14 @@ export const ImageCard = ({ imageId = "image_1673358525000", labels }) => {
     drawRectangle();
   }, []);
 
+  const date = new Date(parseInt(imageId.replace("image_", "")));
+
   return (
-    <div>
+    <div
+      style={{
+        border: "1px solid black",
+        padding: 5,
+      }}>
       <canvas
         width={WIDTH}
         height={HEIGHT}
@@ -48,6 +54,10 @@ export const ImageCard = ({ imageId = "image_1673358525000", labels }) => {
           background: "url('" + "https://kvs-images.s3.eu-central-1.amazonaws.com/" + imageId + "')",
         }}
       />
+      <div>
+        <p>{imageId}</p>
+        <div>{date.toUTCString()}</div>
+      </div>
     </div>
   );
 };

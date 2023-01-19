@@ -50,10 +50,10 @@ function App() {
             Since we have some cost limitation on AWS, we can only select{" "}
             <span className='bold-text'>19/01/2023 12:30PM</span> time. Also, if we have enough resource we can run our
             app with more time.
-            <p>
+            {/* <p>
               Also after selected started time app will get closes 10 images to us, again we are getting these images
               because we haven't enough resource.
-            </p>
+            </p> */}
           </p>
         </SectionMessage>
         <SectionMessage title='Info About App'>
